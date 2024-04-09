@@ -86,10 +86,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddDisputeResponseType
  * @param AddDisputeRequestType $request 
  */
-	function &AddDispute($request)
+	function AddDispute($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddDispute', $request));
+		return ($res =  $this->call('AddDispute', $request));
 
 	}
 /**
@@ -98,10 +98,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddDisputeResponseResponseType
  * @param AddDisputeResponseRequestType $request 
  */
-	function &AddDisputeResponse($request)
+	function AddDisputeResponse($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddDisputeResponse', $request));
+		return ($res =  $this->call('AddDisputeResponse', $request));
 
 	}
 /**
@@ -113,7 +113,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function AddItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddItem', $request));
+		return ($res =  $this->call('AddItem', $request));
 
 	}
 /**
@@ -125,7 +125,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function AddFixedPriceItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddFixedPriceItem', $request));
+		return ($res =  $this->call('AddFixedPriceItem', $request));
 
 	}
 /**
@@ -134,10 +134,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddLiveAuctionItemResponseType
  * @param AddLiveAuctionItemRequestType $request 
  */
-	function &AddLiveAuctionItem($request)
+	function AddLiveAuctionItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddLiveAuctionItem', $request));
+		return ($res =  $this->call('AddLiveAuctionItem', $request));
 
 	}
 /**
@@ -146,10 +146,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddMemberMessageAAQToPartnerResponseType
  * @param AddMemberMessageAAQToPartnerRequestType $request 
  */
-	function &AddMemberMessageAAQToPartner($request)
+	function AddMemberMessageAAQToPartner($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddMemberMessageAAQToPartner', $request));
+		return ($res =  $this->call('AddMemberMessageAAQToPartner', $request));
 
 	}
 /**
@@ -158,10 +158,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddMemberMessageRTQResponseType
  * @param AddMemberMessageRTQRequestType $request 
  */
-	function &AddMemberMessageRTQ($request)
+	function AddMemberMessageRTQ($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddMemberMessageRTQ', $request));
+		return ($res =  $this->call('AddMemberMessageRTQ', $request));
 
 	}
 /**
@@ -170,10 +170,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddMemberMessagesAAQToBidderResponseType
  * @param AddMemberMessagesAAQToBidderRequestType $request 
  */
-	function &AddMemberMessagesAAQToBidder($request)
+	function AddMemberMessagesAAQToBidder($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddMemberMessagesAAQToBidder', $request));
+		return ($res =  $this->call('AddMemberMessagesAAQToBidder', $request));
 
 	}
 /**
@@ -182,10 +182,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddOrderResponseType
  * @param AddOrderRequestType $request 
  */
-	function &AddOrder($request)
+	function AddOrder($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddOrder', $request));
+		return ($res =  $this->call('AddOrder', $request));
 
 	}
 /**
@@ -194,10 +194,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddSecondChanceItemResponseType
  * @param AddSecondChanceItemRequestType $request 
  */
-	function &AddSecondChanceItem($request)
+	function AddSecondChanceItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddSecondChanceItem', $request));
+		return ($res =  $this->call('AddSecondChanceItem', $request));
 
 	}
 /**
@@ -206,10 +206,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddToItemDescriptionResponseType
  * @param AddToItemDescriptionRequestType $request 
  */
-	function &AddToItemDescription($request)
+	function AddToItemDescription($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddToItemDescription', $request));
+		return ($res =  $this->call('AddToItemDescription', $request));
 
 	}
 /**
@@ -218,10 +218,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddToWatchListResponseType
  * @param AddToWatchListRequestType $request 
  */
-	function &AddToWatchList($request)
+	function AddToWatchList($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddToWatchList', $request));
+		return ($res = $this->call('AddToWatchList', $request));
 
 	}
 /**
@@ -230,10 +230,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return AddTransactionConfirmationItemResponseType
  * @param AddTransactionConfirmationItemRequestType $request 
  */
-	function &AddTransactionConfirmationItem($request)
+	function AddTransactionConfirmationItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('AddTransactionConfirmationItem', $request));
+		return ($res =  $this->call('AddTransactionConfirmationItem', $request));
 
 	}
 /**
@@ -242,10 +242,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ApproveLiveAuctionBiddersResponseType
  * @param ApproveLiveAuctionBiddersRequestType $request 
  */
-	function &ApproveLiveAuctionBidders($request)
+	function ApproveLiveAuctionBidders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ApproveLiveAuctionBidders', $request));
+		return ($res =  $this->call('ApproveLiveAuctionBidders', $request));
 
 	}
 /**
@@ -254,10 +254,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return CompleteSaleResponseType
  * @param CompleteSaleRequestType $request 
  */
-	function &CompleteSale($request)
+	function CompleteSale($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('CompleteSale', $request));
+		return ($res =  $this->call('CompleteSale', $request));
 
 	}
 /**
@@ -266,10 +266,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return DeleteMyMessagesResponseType
  * @param DeleteMyMessagesRequestType $request 
  */
-	function &DeleteMyMessages($request)
+	function DeleteMyMessages($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('DeleteMyMessages', $request));
+		return ($res =  $this->call('DeleteMyMessages', $request));
 
 	}
 /**
@@ -278,10 +278,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return EndItemResponseType
  * @param EndItemRequestType $request 
  */
-	function &EndItem($request)
+	function EndItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('EndItem', $request));
+		return ($res = $this->call('EndItem', $request));
 
 	}
 /**
@@ -293,7 +293,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function EndFixedPriceItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('EndFixedPriceItem', $request));
+		return ($res =  $this->call('EndFixedPriceItem', $request));
 
 	}
 /**
@@ -305,7 +305,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function FetchToken($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('FetchToken', $request));
+		return ($res =  $this->call('FetchToken', $request));
 
 	}
 /**
@@ -338,7 +338,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetAdFormatLeadsResponseType
  * @param GetAdFormatLeadsRequestType $request 
  */
-	function &GetAdFormatLeads($request)
+	function GetAdFormatLeads($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetAdFormatLeads', $request));
@@ -350,10 +350,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetAllBiddersResponseType
  * @param GetAllBiddersRequestType $request 
  */
-	function &GetAllBidders($request)
+	function GetAllBidders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetAllBidders', $request));
+		return ($res = $this->call('GetAllBidders', $request));
 
 	}
 /**
@@ -362,10 +362,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetApiAccessRulesResponseType
  * @param GetApiAccessRulesRequestType $request 
  */
-	function &GetApiAccessRules($request)
+	function GetApiAccessRules($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetApiAccessRules', $request));
+		return ($res = $this->call('GetApiAccessRules', $request));
 
 	}
 /**
@@ -374,10 +374,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetAttributesCSResponseType
  * @param GetAttributesCSRequestType $request 
  */
-	function &GetAttributesCS($request)
+	function GetAttributesCS($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetAttributesCS', $request));
+		return ($res =  $this->call('GetAttributesCS', $request));
 
 	}
 /**
@@ -386,10 +386,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetAttributesXSLResponseType
  * @param GetAttributesXSLRequestType $request 
  */
-	function &GetAttributesXSL($request)
+	function GetAttributesXSL($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetAttributesXSL', $request));
+		return ($res = $this->call('GetAttributesXSL', $request));
 
 	}
 /**
@@ -398,10 +398,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetBestOffersResponseType
  * @param GetBestOffersRequestType $request 
  */
-	function &GetBestOffers($request)
+	function GetBestOffers($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetBestOffers', $request));
+		return ($res = $this->call('GetBestOffers', $request));
 
 	}
 /**
@@ -410,10 +410,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetBidderListResponseType
  * @param GetBidderListRequestType $request 
  */
-	function &GetBidderList($request)
+	function GetBidderList($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetBidderList', $request));
+		return ($res = $this->call('GetBidderList', $request));
 
 	}
 /**
@@ -422,10 +422,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCartResponseType
  * @param GetCartRequestType $request 
  */
-	function &GetCart($request)
+	function GetCart($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCart', $request));
+		return ($res = $this->call('GetCart', $request));
 
 	}
 /**
@@ -434,10 +434,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategoriesResponseType
  * @param GetCategoriesRequestType $request 
  */
-	function &GetCategories($request)
+	function GetCategories($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategories', $request));
+		return ($res = $this->call('GetCategories', $request));
 
 	}
 /**
@@ -446,10 +446,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategory2CSResponseType
  * @param GetCategory2CSRequestType $request 
  */
-	function &GetCategory2CS($request)
+	function GetCategory2CS($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategory2CS', $request));
+		return ($res = $this->call('GetCategory2CS', $request));
 
 	}
 /**
@@ -458,10 +458,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategoryFeaturesResponseType
  * @param GetCategoryFeaturesRequestType $request 
  */
-	function &GetCategoryFeatures($request)
+	function GetCategoryFeatures($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategoryFeatures', $request));
+		return ($res = $this->call('GetCategoryFeatures', $request));
 
 	}
 /**
@@ -470,10 +470,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategoryListingsResponseType
  * @param GetCategoryListingsRequestType $request 
  */
-	function &GetCategoryListings($request)
+	function GetCategoryListings($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategoryListings', $request));
+		return ($res =  $this->call('GetCategoryListings', $request));
 
 	}
 /**
@@ -482,10 +482,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategoryMappingsResponseType
  * @param GetCategoryMappingsRequestType $request 
  */
-	function &GetCategoryMappings($request)
+	function GetCategoryMappings($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategoryMappings', $request));
+		return ($res = $this->call('GetCategoryMappings', $request));
 
 	}
 /**
@@ -494,10 +494,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCategorySpecificsResponseType
  * @param GetCategorySpecificsRequestType $request 
  */
-	function &GetCategorySpecifics($request)
+	function GetCategorySpecifics($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCategorySpecifics', $request));
+		return ($res = $this->call('GetCategorySpecifics', $request));
 
 	}
 /**
@@ -506,10 +506,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetChallengeTokenResponseType
  * @param GetChallengeTokenRequestType $request 
  */
-	function &GetChallengeToken($request)
+	function GetChallengeToken($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetChallengeToken', $request));
+		return ($res = $this->call('GetChallengeToken', $request));
 
 	}
 /**
@@ -518,10 +518,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCharitiesResponseType
  * @param GetCharitiesRequestType $request 
  */
-	function &GetCharities($request)
+	function GetCharities($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCharities', $request));
+		return ($res = $this->call('GetCharities', $request));
 
 	}
 /**
@@ -530,10 +530,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetContextualKeywordsResponseType
  * @param GetContextualKeywordsRequestType $request 
  */
-	function &GetContextualKeywords($request)
+	function GetContextualKeywords($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetContextualKeywords', $request));
+		return ($res = $this->call('GetContextualKeywords', $request));
 
 	}
 /**
@@ -542,10 +542,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetCrossPromotionsResponseType
  * @param GetCrossPromotionsRequestType $request 
  */
-	function &GetCrossPromotions($request)
+	function GetCrossPromotions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetCrossPromotions', $request));
+		return ($res = $this->call('GetCrossPromotions', $request));
 
 	}
 /**
@@ -554,10 +554,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetDescriptionTemplatesResponseType
  * @param GetDescriptionTemplatesRequestType $request 
  */
-	function &GetDescriptionTemplates($request)
+	function GetDescriptionTemplates($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetDescriptionTemplates', $request));
+		return ($res = $this->call('GetDescriptionTemplates', $request));
 
 	}
 /**
@@ -566,10 +566,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetDisputeResponseType
  * @param GetDisputeRequestType $request 
  */
-	function &GetDispute($request)
+	function GetDispute($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetDispute', $request));
+		return ($res = $this->call('GetDispute', $request));
 
 	}
 /**
@@ -578,10 +578,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetFeedbackResponseType
  * @param GetFeedbackRequestType $request 
  */
-	function &GetFeedback($request)
+	function GetFeedback($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetFeedback', $request));
+		return ($res = $this->call('GetFeedback', $request));
 
 	}
 /**
@@ -590,10 +590,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetHighBiddersResponseType
  * @param GetHighBiddersRequestType $request 
  */
-	function &GetHighBidders($request)
+	function GetHighBidders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetHighBidders', $request));
+		return ($res = $this->call('GetHighBidders', $request));
 
 	}
 /**
@@ -602,10 +602,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetItemResponseType
  * @param GetItemRequestType $request 
  */
-	function &GetItem($request)
+	function GetItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetItem', $request));
+		return ($res = $this->call('GetItem', $request));
 
 	}
 /**
@@ -614,10 +614,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetItemRecommendationsResponseType
  * @param GetItemRecommendationsRequestType $request 
  */
-	function &GetItemRecommendations($request)
+	function GetItemRecommendations($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetItemRecommendations', $request));
+		return ($res = $this->call('GetItemRecommendations', $request));
 
 	}
 /**
@@ -626,10 +626,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetItemShippingResponseType
  * @param GetItemShippingRequestType $request 
  */
-	function &GetItemShipping($request)
+	function GetItemShipping($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetItemShipping', $request));
+		return ($res = $this->call('GetItemShipping', $request));
 
 	}
 /**
@@ -638,10 +638,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetItemTransactionsResponseType
  * @param GetItemTransactionsRequestType $request 
  */
-	function &GetItemTransactions($request)
+	function GetItemTransactions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetItemTransactions', $request));
+		return ($res = $this->call('GetItemTransactions', $request));
 
 	}
 /**
@@ -650,10 +650,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetItemsAwaitingFeedbackResponseType
  * @param GetItemsAwaitingFeedbackRequestType $request 
  */
-	function &GetItemsAwaitingFeedback($request)
+	function GetItemsAwaitingFeedback($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetItemsAwaitingFeedback', $request));
+		return ($res = $this->call('GetItemsAwaitingFeedback', $request));
 
 	}
 /**
@@ -662,10 +662,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetLiveAuctionBiddersResponseType
  * @param GetLiveAuctionBiddersRequestType $request 
  */
-	function &GetLiveAuctionBidders($request)
+	function GetLiveAuctionBidders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetLiveAuctionBidders', $request));
+		return ($res = $this->call('GetLiveAuctionBidders', $request));
 
 	}
 /**
@@ -674,10 +674,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetLiveAuctionCatalogDetailsResponseType
  * @param GetLiveAuctionCatalogDetailsRequestType $request 
  */
-	function &GetLiveAuctionCatalogDetails($request)
+	function GetLiveAuctionCatalogDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetLiveAuctionCatalogDetails', $request));
+		return ($res = $this->call('GetLiveAuctionCatalogDetails', $request));
 
 	}
 /**
@@ -686,10 +686,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMemberMessagesResponseType
  * @param GetMemberMessagesRequestType $request 
  */
-	function &GetMemberMessages($request)
+	function GetMemberMessages($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMemberMessages', $request));
+		return ($res = $this->call('GetMemberMessages', $request));
 
 	}
 /**
@@ -698,10 +698,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMessagePreferencesResponseType
  * @param GetMessagePreferencesRequestType $request 
  */
-	function &GetMessagePreferences($request)
+	function GetMessagePreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMessagePreferences', $request));
+		return ($res = $this->call('GetMessagePreferences', $request));
 
 	}
 /**
@@ -710,10 +710,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMyMessagesResponseType
  * @param GetMyMessagesRequestType $request 
  */
-	function &GetMyMessages($request)
+	function GetMyMessages($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMyMessages', $request));
+		return ($res = $this->call('GetMyMessages', $request));
 
 	}
 /**
@@ -722,10 +722,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMyeBayBuyingResponseType
  * @param GetMyeBayBuyingRequestType $request 
  */
-	function &GetMyeBayBuying($request)
+	function GetMyeBayBuying($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMyeBayBuying', $request));
+		return ($res = $this->call('GetMyeBayBuying', $request));
 
 	}
 /**
@@ -734,10 +734,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMyeBayRemindersResponseType
  * @param GetMyeBayRemindersRequestType $request 
  */
-	function &GetMyeBayReminders($request)
+	function GetMyeBayReminders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMyeBayReminders', $request));
+		return ($res = $this->call('GetMyeBayReminders', $request));
 
 	}
 /**
@@ -746,10 +746,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetMyeBaySellingResponseType
  * @param GetMyeBaySellingRequestType $request 
  */
-	function &GetMyeBaySelling($request)
+	function GetMyeBaySelling($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetMyeBaySelling', $request));
+		return ($res = $this->call('GetMyeBaySelling', $request));
 
 	}
 /**
@@ -758,10 +758,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetNotificationPreferencesResponseType
  * @param GetNotificationPreferencesRequestType $request 
  */
-	function &GetNotificationPreferences($request)
+	function GetNotificationPreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetNotificationPreferences', $request));
+		return ($res = $this->call('GetNotificationPreferences', $request));
 
 	}
 /**
@@ -770,10 +770,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetNotificationsUsageResponseType
  * @param GetNotificationsUsageRequestType $request 
  */
-	function &GetNotificationsUsage($request)
+	function GetNotificationsUsage($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetNotificationsUsage', $request));
+		return ($res = $this->call('GetNotificationsUsage', $request));
 
 	}
 /**
@@ -782,10 +782,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetOrderTransactionsResponseType
  * @param GetOrderTransactionsRequestType $request 
  */
-	function &GetOrderTransactions($request)
+	function GetOrderTransactions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetOrderTransactions', $request));
+		return ($res = $this->call('GetOrderTransactions', $request));
 
 	}
 /**
@@ -794,10 +794,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetOrdersResponseType
  * @param GetOrdersRequestType $request 
  */
-	function &GetOrders($request)
+	function GetOrders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetOrders', $request));
+		return ($res = $this->call('GetOrders', $request));
 
 	}
 /**
@@ -806,10 +806,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetPictureManagerDetailsResponseType
  * @param GetPictureManagerDetailsRequestType $request 
  */
-	function &GetPictureManagerDetails($request)
+	function GetPictureManagerDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetPictureManagerDetails', $request));
+		return ($res = $this->call('GetPictureManagerDetails', $request));
 
 	}
 /**
@@ -818,10 +818,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetPictureManagerOptionsResponseType
  * @param GetPictureManagerOptionsRequestType $request 
  */
-	function &GetPictureManagerOptions($request)
+	function GetPictureManagerOptions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetPictureManagerOptions', $request));
+		return ($res = $this->call('GetPictureManagerOptions', $request));
 
 	}
 /**
@@ -830,10 +830,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetPopularKeywordsResponseType
  * @param GetPopularKeywordsRequestType $request 
  */
-	function &GetPopularKeywords($request)
+	function GetPopularKeywords($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetPopularKeywords', $request));
+		return ($res = $this->call('GetPopularKeywords', $request));
 
 	}
 /**
@@ -842,10 +842,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductFamilyMembersResponseType
  * @param GetProductFamilyMembersRequestType $request 
  */
-	function &GetProductFamilyMembers($request)
+	function GetProductFamilyMembers($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductFamilyMembers', $request));
+		return ($res = $this->call('GetProductFamilyMembers', $request));
 
 	}
 /**
@@ -854,10 +854,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductFinderResponseType
  * @param GetProductFinderRequestType $request 
  */
-	function &GetProductFinder($request)
+	function GetProductFinder($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductFinder', $request));
+		return ($res = $this->call('GetProductFinder', $request));
 
 	}
 /**
@@ -866,10 +866,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductFinderXSLResponseType
  * @param GetProductFinderXSLRequestType $request 
  */
-	function &GetProductFinderXSL($request)
+	function GetProductFinderXSL($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductFinderXSL', $request));
+		return ($res = $this->call('GetProductFinderXSL', $request));
 
 	}
 /**
@@ -878,10 +878,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductSearchPageResponseType
  * @param GetProductSearchPageRequestType $request 
  */
-	function &GetProductSearchPage($request)
+	function GetProductSearchPage($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductSearchPage', $request));
+		return ($res = $this->call('GetProductSearchPage', $request));
 
 	}
 /**
@@ -890,10 +890,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductSearchResultsResponseType
  * @param GetProductSearchResultsRequestType $request 
  */
-	function &GetProductSearchResults($request)
+	function GetProductSearchResults($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductSearchResults', $request));
+		return ($res = $this->call('GetProductSearchResults', $request));
 
 	}
 /**
@@ -902,10 +902,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductSellingPagesResponseType
  * @param GetProductSellingPagesRequestType $request 
  */
-	function &GetProductSellingPages($request)
+	function GetProductSellingPages($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProductSellingPages', $request));
+		return ($res = $this->call('GetProductSellingPages', $request));
 
 	}
 /**
@@ -914,10 +914,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetProductsResponseType
  * @param GetProductsRequestType $request 
  */
-	function &GetProducts($request)
+	function GetProducts($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetProducts', $request));
+		return ($res = $this->call('GetProducts', $request));
 
 	}
 /**
@@ -926,10 +926,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetPromotionRulesResponseType
  * @param GetPromotionRulesRequestType $request 
  */
-	function &GetPromotionRules($request)
+	function GetPromotionRules($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetPromotionRules', $request));
+		return ($res = $this->call('GetPromotionRules', $request));
 
 	}
 /**
@@ -938,10 +938,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetPromotionalSaleDetailsResponseType
  * @param GetPromotionalSaleDetailsRequestType $request 
  */
-	function &GetPromotionalSaleDetails($request)
+	function GetPromotionalSaleDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetPromotionalSaleDetails', $request));
+		return ($res = $this->call('GetPromotionalSaleDetails', $request));
 
 	}
 /**
@@ -950,10 +950,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetReturnURLResponseType
  * @param GetReturnURLRequestType $request 
  */
-	function &GetReturnURL($request)
+	function GetReturnURL($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetReturnURL', $request));
+		return ($res = $this->call('GetReturnURL', $request));
 
 	}
 /**
@@ -962,10 +962,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetRuNameResponseType
  * @param GetRuNameRequestType $request 
  */
-	function &GetRuName($request)
+	function GetRuName($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetRuName', $request));
+		return ($res = $this->call('GetRuName', $request));
 
 	}
 /**
@@ -974,10 +974,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSearchResultsResponseType
  * @param GetSearchResultsRequestType $request 
  */
-	function &GetSearchResults($request)
+	function GetSearchResults($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSearchResults', $request));
+		return ($res = $this->call('GetSearchResults', $request));
 
 	}
 /**
@@ -986,10 +986,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSearchResultsExpressResponseType
  * @param GetSearchResultsExpressRequestType $request 
  */
-	function &GetSearchResultsExpress($request)
+	function GetSearchResultsExpress($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSearchResultsExpress', $request));
+		return ($res = $this->call('GetSearchResultsExpress', $request));
 
 	}
 /**
@@ -998,10 +998,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSellerEventsResponseType
  * @param GetSellerEventsRequestType $request 
  */
-	function &GetSellerEvents($request)
+	function GetSellerEvents($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSellerEvents', $request));
+		return ($res = $this->call('GetSellerEvents', $request));
 
 	}
 /**
@@ -1010,10 +1010,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSellerListResponseType
  * @param GetSellerListRequestType $request 
  */
-	function &GetSellerList($request)
+	function GetSellerList($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSellerList', $request));
+		return ($res = $this->call('GetSellerList', $request));
 
 	}
 /**
@@ -1022,10 +1022,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSellerPaymentsResponseType
  * @param GetSellerPaymentsRequestType $request 
  */
-	function &GetSellerPayments($request)
+	function GetSellerPayments($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSellerPayments', $request));
+		return ($res = $this->call('GetSellerPayments', $request));
 
 	}
 /**
@@ -1034,10 +1034,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSellerTransactionsResponseType
  * @param GetSellerTransactionsRequestType $request 
  */
-	function &GetSellerTransactions($request)
+	function GetSellerTransactions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSellerTransactions', $request));
+		return ($res = $this->call('GetSellerTransactions', $request));
 
 	}
 /**
@@ -1046,10 +1046,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetShippingDiscountProfilesResponseType
  * @param GetShippingDiscountProfilesRequestType $request 
  */
-	function &GetShippingDiscountProfiles($request)
+	function GetShippingDiscountProfiles($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetShippingDiscountProfiles', $request));
+		return ($res = $this->call('GetShippingDiscountProfiles', $request));
 
 	}
 /**
@@ -1058,10 +1058,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetStoreResponseType
  * @param GetStoreRequestType $request 
  */
-	function &GetStore($request)
+	function GetStore($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetStore', $request));
+		return ($res = $this->call('GetStore', $request));
 
 	}
 /**
@@ -1070,10 +1070,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetStoreCategoryUpdateStatusResponseType
  * @param GetStoreCategoryUpdateStatusRequestType $request 
  */
-	function &GetStoreCategoryUpdateStatus($request)
+	function GetStoreCategoryUpdateStatus($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetStoreCategoryUpdateStatus', $request));
+		return ($res = $this->call('GetStoreCategoryUpdateStatus', $request));
 
 	}
 /**
@@ -1082,10 +1082,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetStoreCustomPageResponseType
  * @param GetStoreCustomPageRequestType $request 
  */
-	function &GetStoreCustomPage($request)
+	function GetStoreCustomPage($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetStoreCustomPage', $request));
+		return ($res = $this->call('GetStoreCustomPage', $request));
 
 	}
 /**
@@ -1094,10 +1094,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetStoreOptionsResponseType
  * @param GetStoreOptionsRequestType $request 
  */
-	function &GetStoreOptions($request)
+	function GetStoreOptions($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetStoreOptions', $request));
+		return ($res = $this->call('GetStoreOptions', $request));
 
 	}
 /**
@@ -1106,10 +1106,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetStorePreferencesResponseType
  * @param GetStorePreferencesRequestType $request 
  */
-	function &GetStorePreferences($request)
+	function GetStorePreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetStorePreferences', $request));
+		return ($res = $this->call('GetStorePreferences', $request));
 
 	}
 /**
@@ -1118,10 +1118,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetSuggestedCategoriesResponseType
  * @param GetSuggestedCategoriesRequestType $request 
  */
-	function &GetSuggestedCategories($request)
+	function GetSuggestedCategories($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSuggestedCategories', $request));
+		return ($res = $this->call('GetSuggestedCategories', $request));
 
 	}
 /**
@@ -1130,10 +1130,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetTaxTableResponseType
  * @param GetTaxTableRequestType $request 
  */
-	function &GetTaxTable($request)
+	function GetTaxTable($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetTaxTable', $request));
+		return ($res = $this->call('GetTaxTable', $request));
 
 	}
 /**
@@ -1142,10 +1142,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetUserResponseType
  * @param GetUserRequestType $request 
  */
-	function &GetUser($request)
+	function GetUser($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetUser', $request));
+		return ($res = $this->call('GetUser', $request));
 
 	}
 /**
@@ -1154,10 +1154,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetUserContactDetailsResponseType
  * @param GetUserContactDetailsRequestType $request 
  */
-	function &GetUserContactDetails($request)
+	function GetUserContactDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetUserContactDetails', $request));
+		return ($res = $this->call('GetUserContactDetails', $request));
 
 	}
 /**
@@ -1166,10 +1166,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetUserDisputesResponseType
  * @param GetUserDisputesRequestType $request 
  */
-	function &GetUserDisputes($request)
+	function GetUserDisputes($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetUserDisputes', $request));
+		return ($res = $this->call('GetUserDisputes', $request));
 
 	}
 /**
@@ -1178,10 +1178,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetUserPreferencesResponseType
  * @param GetUserPreferencesRequestType $request 
  */
-	function &GetUserPreferences($request)
+	function GetUserPreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetUserPreferences', $request));
+		return ($res = $this->call('GetUserPreferences', $request));
 
 	}
 /**
@@ -1190,10 +1190,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetVeROReasonCodeDetailsResponseType
  * @param GetVeROReasonCodeDetailsRequestType $request 
  */
-	function &GetVeROReasonCodeDetails($request)
+	function GetVeROReasonCodeDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetVeROReasonCodeDetails', $request));
+		return ($res = $this->call('GetVeROReasonCodeDetails', $request));
 
 	}
 /**
@@ -1202,10 +1202,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetVeROReportStatusResponseType
  * @param GetVeROReportStatusRequestType $request 
  */
-	function &GetVeROReportStatus($request)
+	function GetVeROReportStatus($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetVeROReportStatus', $request));
+		return ($res = $this->call('GetVeROReportStatus', $request));
 
 	}
 /**
@@ -1214,10 +1214,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetWantItNowPostResponseType
  * @param GetWantItNowPostRequestType $request 
  */
-	function &GetWantItNowPost($request)
+	function GetWantItNowPost($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetWantItNowPost', $request));
+		return ($res = $this->call('GetWantItNowPost', $request));
 
 	}
 /**
@@ -1226,10 +1226,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetWantItNowSearchResultsResponseType
  * @param GetWantItNowSearchResultsRequestType $request 
  */
-	function &GetWantItNowSearchResults($request)
+	function GetWantItNowSearchResults($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetWantItNowSearchResults', $request));
+		return ($res = $this->call('GetWantItNowSearchResults', $request));
 
 	}
 /**
@@ -1238,10 +1238,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GeteBayDetailsResponseType
  * @param GeteBayDetailsRequestType $request 
  */
-	function &GeteBayDetails($request)
+	function GeteBayDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GeteBayDetails', $request));
+		return ($res = $this->call('GeteBayDetails', $request));
 
 	}
 /**
@@ -1250,10 +1250,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GeteBayOfficialTimeResponseType
  * @param GeteBayOfficialTimeRequestType $request 
  */
-	function &GeteBayOfficialTime($request)
+	function GeteBayOfficialTime($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GeteBayOfficialTime', $request));
+		return ($res = $this->call('GeteBayOfficialTime', $request));
 
 	}
 /**
@@ -1262,10 +1262,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return IssueRefundResponseType
  * @param IssueRefundRequestType $request 
  */
-	function &IssueRefund($request)
+	function IssueRefund($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('IssueRefund', $request));
+		return ($res = $this->call('IssueRefund', $request));
 
 	}
 /**
@@ -1274,10 +1274,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return LeaveFeedbackResponseType
  * @param LeaveFeedbackRequestType $request 
  */
-	function &LeaveFeedback($request)
+	function LeaveFeedback($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('LeaveFeedback', $request));
+		return ($res = $this->call('LeaveFeedback', $request));
 
 	}
 /**
@@ -1286,10 +1286,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return PlaceOfferResponseType
  * @param PlaceOfferRequestType $request 
  */
-	function &PlaceOffer($request)
+	function PlaceOffer($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('PlaceOffer', $request));
+		return ($res = $this->call('PlaceOffer', $request));
 
 	}
 /**
@@ -1298,7 +1298,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return RelistItemResponseType
  * @param RelistItemRequestType $request 
  */
-	function &RelistItem($request)
+	function RelistItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = $this->call('RelistItem', $request));
@@ -1313,7 +1313,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function RelistFixedPriceItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('RelistFixedPriceItem', $request));
+		return ($res = $this->call('RelistFixedPriceItem', $request));
 
 	}
 /**
@@ -1322,10 +1322,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return RemoveFromWatchListResponseType
  * @param RemoveFromWatchListRequestType $request 
  */
-	function &RemoveFromWatchList($request)
+	function RemoveFromWatchList($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('RemoveFromWatchList', $request));
+		return ($res = $this->call('RemoveFromWatchList', $request));
 
 	}
 /**
@@ -1334,10 +1334,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return RespondToBestOfferResponseType
  * @param RespondToBestOfferRequestType $request 
  */
-	function &RespondToBestOffer($request)
+	function RespondToBestOffer($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('RespondToBestOffer', $request));
+		return ($res =  $this->call('RespondToBestOffer', $request));
 
 	}
 /**
@@ -1346,10 +1346,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return RespondToFeedbackResponseType
  * @param RespondToFeedbackRequestType $request 
  */
-	function &RespondToFeedback($request)
+	function RespondToFeedback($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('RespondToFeedback', $request));
+		return ($res = $this->call('RespondToFeedback', $request));
 
 	}
 /**
@@ -1358,10 +1358,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return RespondToWantItNowPostResponseType
  * @param RespondToWantItNowPostRequestType $request 
  */
-	function &RespondToWantItNowPost($request)
+	function RespondToWantItNowPost($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('RespondToWantItNowPost', $request));
+		return ($res = $this->call('RespondToWantItNowPost', $request));
 
 	}
 /**
@@ -1370,10 +1370,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ReviseCheckoutStatusResponseType
  * @param ReviseCheckoutStatusRequestType $request 
  */
-	function &ReviseCheckoutStatus($request)
+	function ReviseCheckoutStatus($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ReviseCheckoutStatus', $request));
+		return ($res = $this->call('ReviseCheckoutStatus', $request));
 
 	}
 /**
@@ -1385,7 +1385,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function ReviseItem($request)
 	{
 		$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = &$this->call('ReviseItem', $request));
+		return ($res = $this->call('ReviseItem', $request));
 
 	}
 /**
@@ -1397,7 +1397,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function ReviseFixedPriceItem($request)
 	{
 		$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = &$this->call('ReviseFixedPriceItem', $request));
+		return ($res = $this->call('ReviseFixedPriceItem', $request));
 
 	}
 /**
@@ -1406,10 +1406,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ReviseLiveAuctionItemResponseType
  * @param ReviseLiveAuctionItemRequestType $request 
  */
-	function &ReviseLiveAuctionItem($request)
+	function ReviseLiveAuctionItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ReviseLiveAuctionItem', $request));
+		return ($res = $this->call('ReviseLiveAuctionItem', $request));
 
 	}
 /**
@@ -1418,10 +1418,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ReviseMyMessagesResponseType
  * @param ReviseMyMessagesRequestType $request 
  */
-	function &ReviseMyMessages($request)
+	function ReviseMyMessages($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ReviseMyMessages', $request));
+		return ($res = $this->call('ReviseMyMessages', $request));
 
 	}
 /**
@@ -1430,10 +1430,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ReviseMyMessagesFoldersResponseType
  * @param ReviseMyMessagesFoldersRequestType $request 
  */
-	function &ReviseMyMessagesFolders($request)
+	function ReviseMyMessagesFolders($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ReviseMyMessagesFolders', $request));
+		return ($res = $this->call('ReviseMyMessagesFolders', $request));
 
 	}
 /**
@@ -1442,10 +1442,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SellerReverseDisputeResponseType
  * @param SellerReverseDisputeRequestType $request 
  */
-	function &SellerReverseDispute($request)
+	function SellerReverseDispute($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SellerReverseDispute', $request));
+		return ($res = $this->call('SellerReverseDispute', $request));
 
 	}
 /**
@@ -1454,10 +1454,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SendInvoiceResponseType
  * @param SendInvoiceRequestType $request 
  */
-	function &SendInvoice($request)
+	function SendInvoice($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SendInvoice', $request));
+		return ($res = $this->call('SendInvoice', $request));
 
 	}
 /**
@@ -1466,10 +1466,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetCartResponseType
  * @param SetCartRequestType $request 
  */
-	function &SetCart($request)
+	function SetCart($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetCart', $request));
+		return ($res = $this->call('SetCart', $request));
 
 	}
 /**
@@ -1478,10 +1478,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetMessagePreferencesResponseType
  * @param SetMessagePreferencesRequestType $request 
  */
-	function &SetMessagePreferences($request)
+	function SetMessagePreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetMessagePreferences', $request));
+		return ($res = $this->call('SetMessagePreferences', $request));
 
 	}
 /**
@@ -1490,10 +1490,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetNotificationPreferencesResponseType
  * @param SetNotificationPreferencesRequestType $request 
  */
-	function &SetNotificationPreferences($request)
+	function SetNotificationPreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetNotificationPreferences', $request));
+		return ($res = $this->call('SetNotificationPreferences', $request));
 
 	}
 /**
@@ -1502,10 +1502,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetPictureManagerDetailsResponseType
  * @param SetPictureManagerDetailsRequestType $request 
  */
-	function &SetPictureManagerDetails($request)
+	function SetPictureManagerDetails($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetPictureManagerDetails', $request));
+		return ($res = $this->call('SetPictureManagerDetails', $request));
 
 	}
 /**
@@ -1514,10 +1514,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetPromotionalSaleResponseType
  * @param SetPromotionalSaleRequestType $request 
  */
-	function &SetPromotionalSale($request)
+	function SetPromotionalSale($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetPromotionalSale', $request));
+		return ($res = $this->call('SetPromotionalSale', $request));
 
 	}
 /**
@@ -1526,10 +1526,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetPromotionalSaleListingsResponseType
  * @param SetPromotionalSaleListingsRequestType $request 
  */
-	function &SetPromotionalSaleListings($request)
+	function SetPromotionalSaleListings($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetPromotionalSaleListings', $request));
+		return ($res = $this->call('SetPromotionalSaleListings', $request));
 
 	}
 /**
@@ -1538,10 +1538,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetReturnURLResponseType
  * @param SetReturnURLRequestType $request 
  */
-	function &SetReturnURL($request)
+	function SetReturnURL($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetReturnURL', $request));
+		return ($res = $this->call('SetReturnURL', $request));
 
 	}
 /**
@@ -1550,10 +1550,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetShippingDiscountProfilesResponseType
  * @param SetShippingDiscountProfilesRequestType $request 
  */
-	function &SetShippingDiscountProfiles($request)
+	function SetShippingDiscountProfiles($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetShippingDiscountProfiles', $request));
+		return ($res = $this->call('SetShippingDiscountProfiles', $request));
 
 	}
 /**
@@ -1562,10 +1562,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetStoreResponseType
  * @param SetStoreRequestType $request 
  */
-	function &SetStore($request)
+	function SetStore($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetStore', $request));
+		return ($res = $this->call('SetStore', $request));
 
 	}
 /**
@@ -1574,10 +1574,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetStoreCategoriesResponseType
  * @param SetStoreCategoriesRequestType $request 
  */
-	function &SetStoreCategories($request)
+	function SetStoreCategories($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetStoreCategories', $request));
+		return ($res = $this->call('SetStoreCategories', $request));
 
 	}
 /**
@@ -1586,10 +1586,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetStoreCustomPageResponseType
  * @param SetStoreCustomPageRequestType $request 
  */
-	function &SetStoreCustomPage($request)
+	function SetStoreCustomPage($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetStoreCustomPage', $request));
+		return ($res = $this->call('SetStoreCustomPage', $request));
 
 	}
 /**
@@ -1598,10 +1598,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetStorePreferencesResponseType
  * @param SetStorePreferencesRequestType $request 
  */
-	function &SetStorePreferences($request)
+	function SetStorePreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetStorePreferences', $request));
+		return ($res = $this->call('SetStorePreferences', $request));
 
 	}
 /**
@@ -1610,10 +1610,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetTaxTableResponseType
  * @param SetTaxTableRequestType $request 
  */
-	function &SetTaxTable($request)
+	function SetTaxTable($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetTaxTable', $request));
+		return ($res = $this->call('SetTaxTable', $request));
 
 	}
 /**
@@ -1622,10 +1622,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetUserNotesResponseType
  * @param SetUserNotesRequestType $request 
  */
-	function &SetUserNotes($request)
+	function SetUserNotes($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetUserNotes', $request));
+		return ($res = $this->call('SetUserNotes', $request));
 
 	}
 /**
@@ -1634,10 +1634,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return SetUserPreferencesResponseType
  * @param SetUserPreferencesRequestType $request 
  */
-	function &SetUserPreferences($request)
+	function SetUserPreferences($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('SetUserPreferences', $request));
+		return ($res = $this->call('SetUserPreferences', $request));
 
 	}
 /**
@@ -1649,7 +1649,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
 	function UploadSiteHostedPictures($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->callXmlStyle('UploadSiteHostedPictures', $request));
+		return ($res =  $this->callXmlStyle('UploadSiteHostedPictures', $request));
 
 	}
 /**
@@ -1658,10 +1658,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ValidateChallengeInputResponseType
  * @param ValidateChallengeInputRequestType $request 
  */
-	function &ValidateChallengeInput($request)
+	function ValidateChallengeInput($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ValidateChallengeInput', $request));
+		return ($res = $this->call('ValidateChallengeInput', $request));
 
 	}
 /**
@@ -1670,10 +1670,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return ValidateTestUserRegistrationResponseType
  * @param ValidateTestUserRegistrationRequestType $request 
  */
-	function &ValidateTestUserRegistration($request)
+	function ValidateTestUserRegistration($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('ValidateTestUserRegistration', $request));
+		return ($res = $this->call('ValidateTestUserRegistration', $request));
 
 	}
 /**
@@ -1682,10 +1682,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return VeROReportItemsResponseType
  * @param VeROReportItemsRequestType $request 
  */
-	function &VeROReportItems($request)
+	function VeROReportItems($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('VeROReportItems', $request));
+		return ($res = $this->call('VeROReportItems', $request));
 
 	}
 /**
@@ -1694,10 +1694,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return VerifyAddItemResponseType
  * @param VerifyAddItemRequestType $request 
  */
-	function &VerifyAddItem($request)
+	function VerifyAddItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('VerifyAddItem', $request));
+		return ($res = $this->call('VerifyAddItem', $request));
 
 	}
 /**
@@ -1706,10 +1706,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return VerifyAddSecondChanceItemResponseType
  * @param VerifyAddSecondChanceItemRequestType $request 
  */
-	function &VerifyAddSecondChanceItem($request)
+	function VerifyAddSecondChanceItem($request)
 	{
 			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
-		return ($res = & $this->call('VerifyAddSecondChanceItem', $request));
+		return ($res = $this->call('VerifyAddSecondChanceItem', $request));
 
 	}
 

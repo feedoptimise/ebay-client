@@ -173,6 +173,11 @@ class ErrorType extends EbatNs_ComplexType
 	{
 		$this->ErrorClassification = $value;
 	}
+
+	public function __construct()
+	{
+		$this->ErrorType();
+	}
 /**
  *
 

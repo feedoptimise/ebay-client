@@ -53,6 +53,11 @@ class FetchTokenResponseType extends AbstractResponseType
 	{
 		$this->HardExpirationTime = $value;
 	}
+
+	public function __construct()
+	{
+		$this->FetchTokenResponseType();
+	}
 /**
  *
 

@@ -32,6 +32,11 @@ class FetchTokenRequestType extends AbstractRequestType
 	{
 		$this->SessionID = $value;
 	}
+
+	public function __construct()
+	{
+		$this->FetchTokenRequestType();
+	}
 /**
  *
 
