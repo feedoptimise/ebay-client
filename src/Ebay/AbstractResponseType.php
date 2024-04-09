@@ -316,6 +316,10 @@ class AbstractResponseType extends EbatNs_ComplexType
 	{
 		$this->BotBlock = $value;
 	}
+	public function __construct()
+	{
+		$this->AbstractResponseType();
+	}
 /**
  *
 

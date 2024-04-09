@@ -76,10 +76,10 @@ class EbatNs_Client
 	
 	function getVersion()
 	{
-		return EBAY_WSDL_VERSION;
-	}	
+		return EbatNsSettings::EBAY_WSDL_VERSION;
+	}
 
-	function EbatNs_Client( $session, $converter = 'EbatNs_DataConverterIso' )
+	function EbatNs_Client( $session, $converter = 'Feedoptimise\Ebay\EbatNs_DataConverterIso' )
 	{
 		$this->_session = $session;
 		if ($converter)
@@ -234,7 +234,7 @@ class EbatNs_Client
 		return $this->_callUsage;
 	}
 	
-	function & getParser($tns = 'urn:ebay:apis:eBLBaseComponents', $parserOptions = null, $recreate = true)
+	function  getParser($tns = 'urn:ebay:apis:eBLBaseComponents', $parserOptions = null, $recreate = true)
 	{
 		if ($recreate)
 			$this->_parser = null;
@@ -295,6 +295,7 @@ class EbatNs_Client
 	function _makeSessionHeader()
 	{
 		$cred = new UserIdPasswordType();
+//		$cred->UserIdPasswordType();
 		$cred->AppId = $this->_session->getAppId();
 		$cred->DevId = $this->_session->getDevId();
 		$cred->AuthCert = $this->_session->getCertId();
@@ -318,7 +319,7 @@ class EbatNs_Client
 		return $header;
 	} 
 	
-	function call( $method, $request, $parseMode = EBATNS_PARSEMODE_CALL )
+	function call( $method, $request, $parseMode = EbatNsSettings::EBATNS_PARSEMODE_CALL )
 	{
 		$this->_startTp('API call ' . $method);
 		$this->_incrementApiUsage($method);
@@ -327,9 +328,9 @@ class EbatNs_Client
 		
 		$body = $this->encodeMessage( $method, $request );
 		$header = $this->_makeSessionHeader();
-		
+
 		$message = $this->buildMessage( $body, $header );
-		
+
 		$ep = $this->_session->getApiUrl();
 		$ep .= '?callname=' . $method;
 		$ep .= '&siteid=' . $this->_session->getSiteId();
@@ -337,7 +338,7 @@ class EbatNs_Client
 		$ep .= '&version=' . $this->getVersion();
 		$ep .= '&routing=default';
 		$this->_ep = $ep;
-		
+
 		$this->_stopTp('Encoding SOAP Message');
 		$this->_startTp('Sending SOAP Message');
 		
@@ -348,7 +349,7 @@ class EbatNs_Client
 		if ( $responseMsg )
 		{
 			$this->_startTp('Decoding SOAP Message');
-			$ret = & $this->decodeMessage( $method, $responseMsg, $parseMode );
+			$ret = $this->decodeMessage( $method, $responseMsg, $parseMode );
 			$this->_stopTp('Decoding SOAP Message');
 		}
 		else
@@ -368,9 +369,10 @@ class EbatNs_Client
 		return $request->serialize( $method . 'Request', $request, null, true, null, $this->_dataConverter );
 	} 
 	// should transform the response (body) to a PHP object structure
-	function &decodeMessage( $method, &$msg, $parseMode )
+	function decodeMessage( $method, &$msg, $parseMode )
 	{
 		$this->_parser = new EbatNs_ResponseParser( $this, 'urn:ebay:apis:eBLBaseComponents', $this->_parserOptions );
+		$this->_parser->setExtensionPrefix('Feedoptimise\Ebay\\');
 		return $this->_parser->decode( $method . 'Response', $msg, $parseMode );
 	} 
 	// should generate a complete SOAP-envelope for the request
@@ -384,9 +386,9 @@ class EbatNs_Client
 		$soap .= ' encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"';
 		$soap .= ' xmlns="urn:ebay:apis:eBLBaseComponents"';
 		$soap .= ' >';
-		
+		$t = null;
 		if ( $header )
-			$soap .= $header->serialize( 'soap:Header', $header, null, true, null, $t = null );
+			$soap .= $header->serialize( 'soap:Header', $header, null, true, null, $t );
 		
 		$soap .= '<soap:Body>';
 		$soap .= $body;
@@ -530,7 +532,7 @@ class EbatNs_Client
 		return $responseBody;
 	} 
 	
-	function callShoppingApiStyle($method, $request, $parseMode = EBATNS_PARSEMODE_CALL)
+	function callShoppingApiStyle($method, $request, $parseMode = EbatNsSettings::EBATNS_PARSEMODE_CALL)
 	{
 		// we support Production here ! Do we have Sandbox Support for the Shopping API ?!?
 		if ($this->_session->getAppMode() == 1)
@@ -703,7 +705,7 @@ class EbatNs_Client
 		return $responseBody;
 	} 
 
-	function callXmlStyle( $method, $request, $parseMode = EBATNS_PARSEMODE_CALL )
+	function callXmlStyle( $method, $request, $parseMode = EbatNsSettings::EBATNS_PARSEMODE_CALL )
 	{
 		// Inject the Credentials into the request here !
 		$request->_elements['RequesterCredentials'] = array(

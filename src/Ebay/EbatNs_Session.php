@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_Session.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_Session.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael
@@ -574,7 +575,7 @@ class EbatNs_Session {
    * CURLPROXY_HTTP = 0,
    * CURLPROXY_SOCKS4 = 4,
    * CURLPROXY_SOCKS5 = 5
-   * set to EBAY_NOTHING if you are using direct access (default). The cURL operation will acutally check against this value and then use the more abritrate values ProxyXXX
+   * set to EbatNsSettings::EBAY_NOTHING if you are using direct access (default). The cURL operation will acutally check against this value and then use the more abritrate values ProxyXXX
    * 
    * @access public 
    * @return number Value of the ProxyServerType property
@@ -590,7 +591,7 @@ class EbatNs_Session {
    * CURLPROXY_HTTP = 0,
    * CURLPROXY_SOCKS4 = 4,
    * CURLPROXY_SOCKS5 = 5
-   * set to EBAY_NOTHING if you are using direct access (default). The cURL operation will acutally check against this value and then use the more abritrate values ProxyXXX
+   * set to EbatNsSettings::EBAY_NOTHING if you are using direct access (default). The cURL operation will acutally check against this value and then use the more abritrate values ProxyXXX
    * 
    * @access public 
    * @param number $value The new value for the ProxyServerType property
@@ -827,6 +828,7 @@ class EbatNs_Session {
   {
     $this->_props['RawLogName'] = $value;
   }
+
   /**
    * 
    * @access private 
@@ -838,39 +840,39 @@ class EbatNs_Session {
    */
   function _init()
   {
-    $this->_props['AppId'] = EBAY_NOTHING;
-    $this->_props['DevId'] = EBAY_NOTHING;
-    $this->_props['CertId'] = EBAY_NOTHING;
-    $this->_props['RequestPassword'] = EBAY_NOTHING;
-    $this->_props['RequestUser'] = EBAY_NOTHING;
-    $this->_props['TimeOffset'] = EBAY_NOTHING;
-    $this->_props['LogLevel'] = EBAY_NOTHING;
-    $this->_props['LogFilename'] = EBAY_NOTHING;
+    $this->_props['AppId'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['DevId'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['CertId'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['RequestPassword'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['RequestUser'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['TimeOffset'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['LogLevel'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['LogFilename'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['LogMode'] = 0;
-    $this->_props['ApiMode'] = EBAY_NOTHING;
-    $this->_props['SiteId'] = EBAY_NOTHING;
-    $this->_props['CompatibilityLevel'] = EBAY_NOTHING;
-    $this->_props['ErrorLevel'] = EBAY_NOTHING;
+    $this->_props['ApiMode'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['SiteId'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['CompatibilityLevel'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['ErrorLevel'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['ErrorLanguage'] = 0;
-    $this->_props['RequestTimeout'] = EBAY_NOTHING;
+    $this->_props['RequestTimeout'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['TokenMode'] = false;
-    $this->_props['TokenPickupFile'] = EBAY_NOTHING;
+    $this->_props['TokenPickupFile'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['TokenUsePickupFile'] = false;
-    $this->_props['ApiUrl'] = EBAY_NOTHING;
-    $this->_props['AppMode'] = EBAY_NOTHING;
+    $this->_props['ApiUrl'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['AppMode'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['PageSize'] = 200;
-    $this->_props['ProxyServer'] = EBAY_NOTHING;
-    $this->_props['ProxyUidPwd'] = EBAY_NOTHING;
-    $this->_props['ProxyServerType'] = EBAY_NOTHING;
+    $this->_props['ProxyServer'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['ProxyUidPwd'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['ProxyServerType'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['UseHttpCompression'] = false;
     $this->_props['SerializeFolder'] = null;
     $this->_props['XmlEncoding'] = 0;
     $this->_props['DoXmlUtf8Decoding'] = false;
     $this->_props['DoXmlUtf8Encoding'] = false;
     $this->_props['RawLogMode'] = false;
-    $this->_props['RawLogPath'] = EBAY_NOTHING;
+    $this->_props['RawLogPath'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['RawLogSeq'] = 1;
-    $this->_props['RawLogName'] = EBAY_NOTHING;
+    $this->_props['RawLogName'] = EbatNsSettings::EBAY_NOTHING;
   }
   /**
    * 
@@ -1035,12 +1037,12 @@ class EbatNs_Session {
    * @param string $configFile 
    * @return void 
    */
-  function EbatNs_Session($configFile = null)
+  public function __construct($configFile = null)
   {
     // call to initialisation
     // (be sure to call this always on the actual class and prevent any overwriting)
-    EbatNs_Session::_init();
-    $this->_props['RequestToken'] = EBAY_NOTHING;
+    $this->_init();
+    $this->_props['RequestToken'] = EbatNsSettings::EBAY_NOTHING;
     if ($configFile != null) {
       $this->InitFromConfig($configFile);
     }

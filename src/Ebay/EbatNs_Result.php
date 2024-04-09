@@ -309,11 +309,11 @@ class EbatNs_Result {
     $this->_props['ResultStatus'] = '';
     $this->_props['HasRefreshedToken'] = false;
     $this->_props['HasNewTokenHardExpirationDate'] = false;
-    $this->_props['RefreshedToken'] = EBAY_NOTHING;
-    $this->_props['HardExpirationDateToken'] = EBAY_NOTHING;
-    $this->_props['SingleValue'] = EBAY_NOTHING;
+    $this->_props['RefreshedToken'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['HardExpirationDateToken'] = EbatNsSettings::EBAY_NOTHING;
+    $this->_props['SingleValue'] = EbatNsSettings::EBAY_NOTHING;
     $this->_props['RawLogSeq'] = 0;
-    $this->_props['RawResult'] = EBAY_NOTHING;
+    $this->_props['RawResult'] = EbatNsSettings::EBAY_NOTHING;
   }
   /**
    * 

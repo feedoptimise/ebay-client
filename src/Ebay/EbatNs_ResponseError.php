@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_ResponseError.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_ResponseError.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael
@@ -34,7 +35,7 @@
 			$this->Errors[] = $err;
 		}
 		
-		function getErrors()
+		function getErrors($index = null)
 		{
 			return $this->Errors;
 		}

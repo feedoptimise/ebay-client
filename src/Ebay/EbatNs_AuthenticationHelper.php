@@ -1,4 +1,5 @@
 <?php
+namespace Feedoptimise\Ebay;
 //require_once 'EbatNs_ServiceProxy.php';
 //require_once 'GetRuNameRequestType.php';
 

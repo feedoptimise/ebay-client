@@ -77,7 +77,7 @@
 		function getResponse($msg)
 		{
 			$this->_parser = &new EbatNs_ResponseParser( &$this, 'urn:ebay:apis:eBLBaseComponents' );
-			$this->_parser->setMode(EBATNS_PARSEMODE_NOTIFICATION);
+			$this->_parser->setMode(EbatNsSettings::EBATNS_PARSEMODE_NOTIFICATION);
 			
 			return $this->_parser->decode( $method . 'Response', $msg, true );
 		}

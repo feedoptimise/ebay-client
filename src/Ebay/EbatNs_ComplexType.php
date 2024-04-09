@@ -34,7 +34,7 @@ class EbatNs_ComplexType extends EbatNs_SimpleType
 	// give obmitNull = true to obmit a value if the value if not set (null or 0 or '')
 	// we assume a value also as empty if the any child elements will not return any data.
 	function serialize( $elementName, $value, $attributeValues, $obmitNull, $typeName, &$dataConverter )
-	{ 
+	{
 		$ret = '';
 		// lets decide where we are getting the data from
 		if ( $this->_dataInValueArray )
@@ -47,7 +47,7 @@ class EbatNs_ComplexType extends EbatNs_SimpleType
 				else
 					$attributeValues = null;
 
-				if ( is_a( $data, 'EbatNs_SimpleType' ) )
+				if ( is_a( $data, 'Feedoptimise\Ebay\EbatNs_SimpleType' ) )
 				{
 					$ret .= $data->serialize( $key, $data, $attributeValues, $obmitNull, null, $dataConverter );
 				} 
@@ -82,7 +82,7 @@ class EbatNs_ComplexType extends EbatNs_SimpleType
 						else
 							$childAttributeValues = null;
 
-						if ( is_a( $childValue, 'EbatNs_SimpleType' ) )
+						if ( is_a( $childValue, 'Feedoptimise\Ebay\EbatNs_SimpleType' ) )
 						{ 
 							$ret .= $childValue->serialize( $childElementName, $arrayElementValue, $childAttributeValues, $obmitNull, $childType, $dataConverter ); 
 						} 
@@ -127,7 +127,7 @@ class EbatNs_ComplexType extends EbatNs_SimpleType
 					else
 						$childAttributeValues = null;
 
-					if ( is_a( $childValue, 'EbatNs_SimpleType' ) )
+					if ( is_a( $childValue, 'Feedoptimise\Ebay\EbatNs_SimpleType' ) )
 					{ 
 						$ret .= $childValue->serialize( $childElementName, $childValue, $childAttributeValues, $obmitNull, $childType, $dataConverter ); 
 					} 

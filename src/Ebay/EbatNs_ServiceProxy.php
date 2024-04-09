@@ -29,7 +29,7 @@
 /**
  * The WSDL version the SDK is built against.
  */
-define('EBAY_WSDL_VERSION', 527);
+
 
 /**
  * This class is the basic interface to the eBay-Webserice for the user.
@@ -38,9 +38,9 @@ define('EBAY_WSDL_VERSION', 527);
  */
 class EbatNs_ServiceProxy extends EbatNs_Client
 {
-    function EbatNs_ServiceProxy(& $session, $converter = 'EbatNs_DataConverterIso')
+    function EbatNs_ServiceProxy(& $session, $converter = 'Feedoptimise\Ebay\EbatNs_DataConverterIso')
     {
-        if (is_a($session, 'EbatNs_Session'))
+        if (is_a($session, 'Feedoptimise\Ebay\EbatNs_Session'))
         {
 			// Initialize the SOAP Client.
 			$this->EbatNs_Client($session, $converter);
@@ -88,7 +88,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddDispute($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddDispute', $request));
 
 	}
@@ -100,7 +100,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddDisputeResponse($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddDisputeResponse', $request));
 
 	}
@@ -112,7 +112,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function AddItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddItem', $request));
 
 	}
@@ -124,7 +124,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function AddFixedPriceItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddFixedPriceItem', $request));
 
 	}
@@ -136,7 +136,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddLiveAuctionItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddLiveAuctionItem', $request));
 
 	}
@@ -148,7 +148,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddMemberMessageAAQToPartner($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddMemberMessageAAQToPartner', $request));
 
 	}
@@ -160,7 +160,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddMemberMessageRTQ($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddMemberMessageRTQ', $request));
 
 	}
@@ -172,7 +172,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddMemberMessagesAAQToBidder($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddMemberMessagesAAQToBidder', $request));
 
 	}
@@ -184,7 +184,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddOrder($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddOrder', $request));
 
 	}
@@ -196,7 +196,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddSecondChanceItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddSecondChanceItem', $request));
 
 	}
@@ -208,7 +208,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddToItemDescription($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddToItemDescription', $request));
 
 	}
@@ -220,7 +220,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddToWatchList($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddToWatchList', $request));
 
 	}
@@ -232,7 +232,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &AddTransactionConfirmationItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('AddTransactionConfirmationItem', $request));
 
 	}
@@ -244,7 +244,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ApproveLiveAuctionBidders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ApproveLiveAuctionBidders', $request));
 
 	}
@@ -256,7 +256,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &CompleteSale($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('CompleteSale', $request));
 
 	}
@@ -268,7 +268,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &DeleteMyMessages($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('DeleteMyMessages', $request));
 
 	}
@@ -280,7 +280,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &EndItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('EndItem', $request));
 
 	}
@@ -292,7 +292,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function EndFixedPriceItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('EndFixedPriceItem', $request));
 
 	}
@@ -304,7 +304,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function FetchToken($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('FetchToken', $request));
 
 	}
@@ -316,8 +316,8 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function GetSessionID($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetSessionID', $request));
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
+		return ($res =  $this->call('GetSessionID', $request));
 
 	}
 /**
@@ -326,10 +326,10 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  * @return GetAccountResponseType
  * @param GetAccountRequestType $request 
  */
-	function &GetAccount($request)
+	function GetAccount($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
-		return ($res = & $this->call('GetAccount', $request));
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
+		return ($res =  $this->call('GetAccount', $request));
 
 	}
 /**
@@ -340,7 +340,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetAdFormatLeads($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetAdFormatLeads', $request));
 
 	}
@@ -352,7 +352,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetAllBidders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetAllBidders', $request));
 
 	}
@@ -364,7 +364,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetApiAccessRules($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetApiAccessRules', $request));
 
 	}
@@ -376,7 +376,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetAttributesCS($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetAttributesCS', $request));
 
 	}
@@ -388,7 +388,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetAttributesXSL($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetAttributesXSL', $request));
 
 	}
@@ -400,7 +400,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetBestOffers($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetBestOffers', $request));
 
 	}
@@ -412,7 +412,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetBidderList($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetBidderList', $request));
 
 	}
@@ -424,7 +424,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCart($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCart', $request));
 
 	}
@@ -436,7 +436,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategories($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategories', $request));
 
 	}
@@ -448,7 +448,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategory2CS($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategory2CS', $request));
 
 	}
@@ -460,7 +460,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategoryFeatures($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategoryFeatures', $request));
 
 	}
@@ -472,7 +472,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategoryListings($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategoryListings', $request));
 
 	}
@@ -484,7 +484,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategoryMappings($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategoryMappings', $request));
 
 	}
@@ -496,7 +496,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCategorySpecifics($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCategorySpecifics', $request));
 
 	}
@@ -508,7 +508,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetChallengeToken($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetChallengeToken', $request));
 
 	}
@@ -520,7 +520,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCharities($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCharities', $request));
 
 	}
@@ -532,7 +532,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetContextualKeywords($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetContextualKeywords', $request));
 
 	}
@@ -544,7 +544,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetCrossPromotions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetCrossPromotions', $request));
 
 	}
@@ -556,7 +556,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetDescriptionTemplates($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetDescriptionTemplates', $request));
 
 	}
@@ -568,7 +568,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetDispute($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetDispute', $request));
 
 	}
@@ -580,7 +580,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetFeedback($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetFeedback', $request));
 
 	}
@@ -592,7 +592,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetHighBidders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetHighBidders', $request));
 
 	}
@@ -604,7 +604,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetItem', $request));
 
 	}
@@ -616,7 +616,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetItemRecommendations($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetItemRecommendations', $request));
 
 	}
@@ -628,7 +628,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetItemShipping($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetItemShipping', $request));
 
 	}
@@ -640,7 +640,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetItemTransactions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetItemTransactions', $request));
 
 	}
@@ -652,7 +652,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetItemsAwaitingFeedback($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetItemsAwaitingFeedback', $request));
 
 	}
@@ -664,7 +664,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetLiveAuctionBidders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetLiveAuctionBidders', $request));
 
 	}
@@ -676,7 +676,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetLiveAuctionCatalogDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetLiveAuctionCatalogDetails', $request));
 
 	}
@@ -688,7 +688,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMemberMessages($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMemberMessages', $request));
 
 	}
@@ -700,7 +700,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMessagePreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMessagePreferences', $request));
 
 	}
@@ -712,7 +712,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMyMessages($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMyMessages', $request));
 
 	}
@@ -724,7 +724,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMyeBayBuying($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMyeBayBuying', $request));
 
 	}
@@ -736,7 +736,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMyeBayReminders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMyeBayReminders', $request));
 
 	}
@@ -748,7 +748,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetMyeBaySelling($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetMyeBaySelling', $request));
 
 	}
@@ -760,7 +760,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetNotificationPreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetNotificationPreferences', $request));
 
 	}
@@ -772,7 +772,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetNotificationsUsage($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetNotificationsUsage', $request));
 
 	}
@@ -784,7 +784,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetOrderTransactions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetOrderTransactions', $request));
 
 	}
@@ -796,7 +796,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetOrders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetOrders', $request));
 
 	}
@@ -808,7 +808,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetPictureManagerDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetPictureManagerDetails', $request));
 
 	}
@@ -820,7 +820,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetPictureManagerOptions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetPictureManagerOptions', $request));
 
 	}
@@ -832,7 +832,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetPopularKeywords($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetPopularKeywords', $request));
 
 	}
@@ -844,7 +844,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductFamilyMembers($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductFamilyMembers', $request));
 
 	}
@@ -856,7 +856,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductFinder($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductFinder', $request));
 
 	}
@@ -868,7 +868,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductFinderXSL($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductFinderXSL', $request));
 
 	}
@@ -880,7 +880,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductSearchPage($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductSearchPage', $request));
 
 	}
@@ -892,7 +892,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductSearchResults($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductSearchResults', $request));
 
 	}
@@ -904,7 +904,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProductSellingPages($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProductSellingPages', $request));
 
 	}
@@ -916,7 +916,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetProducts($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetProducts', $request));
 
 	}
@@ -928,7 +928,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetPromotionRules($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetPromotionRules', $request));
 
 	}
@@ -940,7 +940,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetPromotionalSaleDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetPromotionalSaleDetails', $request));
 
 	}
@@ -952,7 +952,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetReturnURL($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetReturnURL', $request));
 
 	}
@@ -964,7 +964,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetRuName($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetRuName', $request));
 
 	}
@@ -976,7 +976,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSearchResults($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSearchResults', $request));
 
 	}
@@ -988,7 +988,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSearchResultsExpress($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSearchResultsExpress', $request));
 
 	}
@@ -1000,7 +1000,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSellerEvents($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSellerEvents', $request));
 
 	}
@@ -1012,7 +1012,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSellerList($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSellerList', $request));
 
 	}
@@ -1024,7 +1024,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSellerPayments($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSellerPayments', $request));
 
 	}
@@ -1036,7 +1036,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSellerTransactions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSellerTransactions', $request));
 
 	}
@@ -1048,7 +1048,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetShippingDiscountProfiles($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetShippingDiscountProfiles', $request));
 
 	}
@@ -1060,7 +1060,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetStore($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetStore', $request));
 
 	}
@@ -1072,7 +1072,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetStoreCategoryUpdateStatus($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetStoreCategoryUpdateStatus', $request));
 
 	}
@@ -1084,7 +1084,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetStoreCustomPage($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetStoreCustomPage', $request));
 
 	}
@@ -1096,7 +1096,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetStoreOptions($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetStoreOptions', $request));
 
 	}
@@ -1108,7 +1108,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetStorePreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetStorePreferences', $request));
 
 	}
@@ -1120,7 +1120,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetSuggestedCategories($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetSuggestedCategories', $request));
 
 	}
@@ -1132,7 +1132,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetTaxTable($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetTaxTable', $request));
 
 	}
@@ -1144,7 +1144,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetUser($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetUser', $request));
 
 	}
@@ -1156,7 +1156,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetUserContactDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetUserContactDetails', $request));
 
 	}
@@ -1168,7 +1168,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetUserDisputes($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetUserDisputes', $request));
 
 	}
@@ -1180,7 +1180,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetUserPreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetUserPreferences', $request));
 
 	}
@@ -1192,7 +1192,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetVeROReasonCodeDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetVeROReasonCodeDetails', $request));
 
 	}
@@ -1204,7 +1204,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetVeROReportStatus($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetVeROReportStatus', $request));
 
 	}
@@ -1216,7 +1216,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetWantItNowPost($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetWantItNowPost', $request));
 
 	}
@@ -1228,7 +1228,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GetWantItNowSearchResults($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GetWantItNowSearchResults', $request));
 
 	}
@@ -1240,7 +1240,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GeteBayDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GeteBayDetails', $request));
 
 	}
@@ -1252,7 +1252,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &GeteBayOfficialTime($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('GeteBayOfficialTime', $request));
 
 	}
@@ -1264,7 +1264,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &IssueRefund($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('IssueRefund', $request));
 
 	}
@@ -1276,7 +1276,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &LeaveFeedback($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('LeaveFeedback', $request));
 
 	}
@@ -1288,7 +1288,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &PlaceOffer($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('PlaceOffer', $request));
 
 	}
@@ -1300,7 +1300,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &RelistItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = $this->call('RelistItem', $request));
 
 	}
@@ -1312,7 +1312,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function RelistFixedPriceItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('RelistFixedPriceItem', $request));
 
 	}
@@ -1324,7 +1324,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &RemoveFromWatchList($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('RemoveFromWatchList', $request));
 
 	}
@@ -1336,7 +1336,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &RespondToBestOffer($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('RespondToBestOffer', $request));
 
 	}
@@ -1348,7 +1348,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &RespondToFeedback($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('RespondToFeedback', $request));
 
 	}
@@ -1360,7 +1360,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &RespondToWantItNowPost($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('RespondToWantItNowPost', $request));
 
 	}
@@ -1372,7 +1372,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ReviseCheckoutStatus($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ReviseCheckoutStatus', $request));
 
 	}
@@ -1384,7 +1384,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function ReviseItem($request)
 	{
-		$request->setVersion(EBAY_WSDL_VERSION);
+		$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = &$this->call('ReviseItem', $request));
 
 	}
@@ -1396,7 +1396,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function ReviseFixedPriceItem($request)
 	{
-		$request->setVersion(EBAY_WSDL_VERSION);
+		$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = &$this->call('ReviseFixedPriceItem', $request));
 
 	}
@@ -1408,7 +1408,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ReviseLiveAuctionItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ReviseLiveAuctionItem', $request));
 
 	}
@@ -1420,7 +1420,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ReviseMyMessages($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ReviseMyMessages', $request));
 
 	}
@@ -1432,7 +1432,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ReviseMyMessagesFolders($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ReviseMyMessagesFolders', $request));
 
 	}
@@ -1444,7 +1444,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SellerReverseDispute($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SellerReverseDispute', $request));
 
 	}
@@ -1456,7 +1456,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SendInvoice($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SendInvoice', $request));
 
 	}
@@ -1468,7 +1468,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetCart($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetCart', $request));
 
 	}
@@ -1480,7 +1480,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetMessagePreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetMessagePreferences', $request));
 
 	}
@@ -1492,7 +1492,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetNotificationPreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetNotificationPreferences', $request));
 
 	}
@@ -1504,7 +1504,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetPictureManagerDetails($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetPictureManagerDetails', $request));
 
 	}
@@ -1516,7 +1516,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetPromotionalSale($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetPromotionalSale', $request));
 
 	}
@@ -1528,7 +1528,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetPromotionalSaleListings($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetPromotionalSaleListings', $request));
 
 	}
@@ -1540,7 +1540,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetReturnURL($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetReturnURL', $request));
 
 	}
@@ -1552,7 +1552,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetShippingDiscountProfiles($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetShippingDiscountProfiles', $request));
 
 	}
@@ -1564,7 +1564,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetStore($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetStore', $request));
 
 	}
@@ -1576,7 +1576,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetStoreCategories($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetStoreCategories', $request));
 
 	}
@@ -1588,7 +1588,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetStoreCustomPage($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetStoreCustomPage', $request));
 
 	}
@@ -1600,7 +1600,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetStorePreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetStorePreferences', $request));
 
 	}
@@ -1612,7 +1612,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetTaxTable($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetTaxTable', $request));
 
 	}
@@ -1624,7 +1624,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetUserNotes($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetUserNotes', $request));
 
 	}
@@ -1636,7 +1636,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &SetUserPreferences($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('SetUserPreferences', $request));
 
 	}
@@ -1648,7 +1648,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function UploadSiteHostedPictures($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->callXmlStyle('UploadSiteHostedPictures', $request));
 
 	}
@@ -1660,7 +1660,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ValidateChallengeInput($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ValidateChallengeInput', $request));
 
 	}
@@ -1672,7 +1672,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &ValidateTestUserRegistration($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('ValidateTestUserRegistration', $request));
 
 	}
@@ -1684,7 +1684,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &VeROReportItems($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('VeROReportItems', $request));
 
 	}
@@ -1696,7 +1696,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &VerifyAddItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('VerifyAddItem', $request));
 
 	}
@@ -1708,7 +1708,7 @@ class EbatNs_ServiceProxy extends EbatNs_Client
  */
 	function &VerifyAddSecondChanceItem($request)
 	{
-			$request->setVersion(EBAY_WSDL_VERSION);
+			$request->setVersion(EbatNsSettings::EBAY_WSDL_VERSION);
 		return ($res = & $this->call('VerifyAddSecondChanceItem', $request));
 
 	}

@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_RequestHeaderType.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_RequestHeaderType.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael
@@ -16,6 +17,11 @@
 	class EbatNs_RequestHeaderType extends EbatNs_ComplexType
 	{
 		var $RequesterCredentials;
+
+        public function __construct()
+        {
+            $this->EbatNs_RequestHeaderType();
+        }
 		
 		function EbatNs_RequestHeaderType()
 		{

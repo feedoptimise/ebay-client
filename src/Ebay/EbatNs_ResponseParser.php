@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_ResponseParser.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_ResponseParser.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael
@@ -15,14 +16,6 @@
  * 2     30.01.06 16:44 Mcoslar
  * �nderungen eingef�gt
  */
-	define ('EBATNS_PARSEMODE_CALL', 1);
-	define ('EBATNS_PARSEMODE_NOTIFICATION', 2);
-	define ('EBATNS_PARSEMODE_CALLEXTENSION', 3);
-	
-	define ('EBATNS_PSTATENOT_INITIAL', 0);
-	define ('EBATNS_PSTATENOT_HAS_SIGNATURE', 1);
-	define ('EBATNS_PSTATENOT_FOUND_ENVBODY', 2);	
-	define ('EBATNS_PSTATENOT_IN_RESPONSE', 3);
 	
 	class EbatNs_ResponseParser
 	{
@@ -48,11 +41,16 @@
 		var $_hasFault = false;
 		var $_hasError = false;
 		
-		var $_parseMode = EBATNS_PARSEMODE_CALL;
+		var $_parseMode = EbatNsSettings::EBATNS_PARSEMODE_CALL;
 		var $_tmpNotificationSignature = null;
-		var $_notificationParseState = EBATNS_PSTATENOT_INITIAL;
+		var $_notificationParseState = EbatNsSettings::EBATNS_PSTATENOT_INITIAL;
 		
 		var $_extensionPrefix = null;
+
+        public function __construct(& $client, $typeNs, $options = null)
+        {
+            $this->EbatNs_ResponseParser($client, $typeNs, $options);
+        }
 		
 		function EbatNs_ResponseParser(& $client, $typeNs, $options = null)
 		{
@@ -119,15 +117,15 @@
 			return (class_exists($typeName));
 		}
 		
-		function & _makeValue($typeName)
+		function  _makeValue($typeName)
 		{
-			// if ($this->_parseMode == EBATNS_PARSEMODE_CALLEXTENSION)
-			//	$typeName = $this->_extensionPrefix . $typeName;
+			// if ($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_CALLEXTENSION)
+				$typeName = $this->_extensionPrefix . $typeName;
 			
 			if ($this->_includeType($typeName))
 			{
 				$t = new $typeName();
-			
+
 				// transfer the typeInfo to the typeMap
 				$typeInfo['typeName'] = $typeName;
 				$typeInfo['elements'] = isset($t->_elements) ? $t->_elements : null;
@@ -149,7 +147,7 @@
 				return null;
 		}
 		
-		function & decode($responseName, $messageText, $parseMode = EBATNS_PARSEMODE_CALL, $responseTypeName = null)
+		function  decode($responseName, $messageText, $parseMode = EbatNsSettings::EBATNS_PARSEMODE_CALL, $responseTypeName = null)
 		{
 			$this->_responseObject = null;
 	        $this->_stValue = array();
@@ -167,7 +165,7 @@
 			else
 				$this->_responseTypeName = $responseName . 'Type';
 				
-			if ($parseMode != EBATNS_PARSEMODE_CALL)
+			if ($parseMode != EbatNsSettings::EBATNS_PARSEMODE_CALL)
 				$this->setMode($parseMode);
 						
 			$encoding = 'UTF-8';
@@ -194,10 +192,12 @@
             
             if ($this->_hasFault)
             {
-				return ($t = & $this->_decodeFault($messageText));				
+//				return ($t = & $this->_decodeFault($messageText));
+                return 	$this->_decodeFault($messageText);
 			}
 			
-            return ($t = & $this->_responseObject);
+//            return ($t = & $this->_responseObject);
+            return $this->_responseObject;
 		}
 
 		function _decodeFault($msg)
@@ -236,18 +236,18 @@
 	    function _startElement($parser, $name, $attrs)
 		{
 			// wait for the starting-element
-			if ((	($this->_parseMode == EBATNS_PARSEMODE_CALL ||
-					$this->_parseMode == EBATNS_PARSEMODE_CALLEXTENSION ) && 
+			if ((	($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_CALL ||
+					$this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_CALLEXTENSION ) && 
 					!$this->_inResponse	&& $name != $this->_waitForResponseTag
 				)
 				||
 				(
-					 $this->_parseMode == EBATNS_PARSEMODE_NOTIFICATION &&
-					 $this->_notificationParseState < EBATNS_PSTATENOT_IN_RESPONSE
+					 $this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_NOTIFICATION &&
+					 $this->_notificationParseState < EbatNsSettings::EBATNS_PSTATENOT_IN_RESPONSE
 				))
 			{
-				if ($this->_parseMode == EBATNS_PARSEMODE_CALL ||
-					$this->_parseMode == EBATNS_PARSEMODE_CALLEXTENSION )
+				if ($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_CALL ||
+					$this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_CALLEXTENSION )
 				{
 					if ($name == 'soapenv:Fault')
 						$this->_hasFault = true;
@@ -257,21 +257,21 @@
 				{
 					if (strstr($name, ':NotificationSignature') !== false)
 					{
-						$this->_notificationParseState = EBATNS_PSTATENOT_HAS_SIGNATURE;
+						$this->_notificationParseState = EbatNsSettings::EBATNS_PSTATENOT_HAS_SIGNATURE;
 						return;
 					}
 					
 					if ($name == 'soapenv:Body')
 					{
-						$this->_notificationParseState = EBATNS_PSTATENOT_FOUND_ENVBODY;
+						$this->_notificationParseState = EbatNsSettings::EBATNS_PSTATENOT_FOUND_ENVBODY;
 						return;
 					}
 					
-					if ($this->_notificationParseState == EBATNS_PSTATENOT_FOUND_ENVBODY)
+					if ($this->_notificationParseState == EbatNsSettings::EBATNS_PSTATENOT_FOUND_ENVBODY)
 					{
 						// know we will have the name of the response in $name
 						// so we just set the state and recall the method again !
-						$this->_notificationParseState = EBATNS_PSTATENOT_IN_RESPONSE;
+						$this->_notificationParseState = EbatNsSettings::EBATNS_PSTATENOT_IN_RESPONSE;
 						$this->_waitForResponseTag = $name;
 						$this->_responseTypeName = $name . 'Type';
 						
@@ -287,14 +287,14 @@
 				if (!$this->_inResponse)
 				{
 					$parent  = null;
-					$current = & $this->_makeValue($this->_responseTypeName);
+					$current =  $this->_makeValue($this->_responseTypeName);
 					$this->_inResponse = true;
 					$mapName = null;
 				}
 				else
 				{
 					$mapName = $name;
-					
+
 					$parent = & $this->_stValue[$this->_depth];
 					$typeInfo = $this->_typeMap[strtolower(get_class($parent))];
 					
@@ -308,7 +308,7 @@
 						// plain strings but child-objects
 						if (strpos($elementInfo['type'], 'CodeType') === false)
 						{
-							$current = & $this->_makeValue($elementInfo['type']);
+							$current =  $this->_makeValue($elementInfo['type']);
 
 							if ($attrs)
 							{
@@ -340,7 +340,7 @@
 		
 		function _endElement($parser, $name)
 		{
-			if ($this->_parseMode == EBATNS_PARSEMODE_NOTIFICATION && $this->_notificationParseState == EBATNS_PSTATENOT_HAS_SIGNATURE)
+			if ($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_NOTIFICATION && $this->_notificationParseState == EbatNsSettings::EBATNS_PSTATENOT_HAS_SIGNATURE)
 			{
 				$this->_tmpNotificationSignature = $this->_stData[$this->_depth];
 				return;
@@ -355,7 +355,7 @@
 			{
 				$this->_responseObject = & $this->_stValue[1];
 				
-				if ($this->_parseMode == EBATNS_PARSEMODE_NOTIFICATION)
+				if ($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_NOTIFICATION)
 					 $this->_responseObject->NotificationSignature = $this->_tmpNotificationSignature;
 					 
 				$this->_reduceElement($this->_responseObject);
@@ -464,7 +464,7 @@
 
 		function _cData($parser, $data)
 		{
-			if ($this->_parseMode == EBATNS_PARSEMODE_NOTIFICATION && $this->_notificationParseState == EBATNS_PSTATENOT_HAS_SIGNATURE)
+			if ($this->_parseMode == EbatNsSettings::EBATNS_PARSEMODE_NOTIFICATION && $this->_notificationParseState == EbatNsSettings::EBATNS_PSTATENOT_HAS_SIGNATURE)
 			{
 				$this->_stData[$this->_depth] .= $data;
 			}

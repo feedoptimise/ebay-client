@@ -1,5 +1,5 @@
 <?php
-
+namespace Feedoptimise\Ebay;
 //require_once 'AbstractRequestType.php';
 
 class GetSessionIDRequestType extends AbstractRequestType
@@ -27,6 +27,10 @@ class GetSessionIDRequestType extends AbstractRequestType
 	function setRuName($value)
 	{
 		$this->RuName = $value;
+	}
+	public function __construct()
+	{
+		$this->GetSessionIDRequestType();
 	}
 /**
  *

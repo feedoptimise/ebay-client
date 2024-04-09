@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_RequesterCredentialType.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_RequesterCredentialType.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael
@@ -20,6 +21,11 @@
 		// @var CredentialType $Credentials
 		var $Credentials;
 		var $_attributeValues;
+
+        public function __construct()
+        {
+            $this->EbatNs_RequesterCredentialType();
+        }
 		
 		function EbatNs_RequesterCredentialType()
 		{

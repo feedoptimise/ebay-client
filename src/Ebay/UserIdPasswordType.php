@@ -116,6 +116,11 @@ class UserIdPasswordType extends EbatNs_ComplexType
 	{
 		$this->Password = $value;
 	}
+
+	public function __construct()
+	{
+		$this->UserIdPasswordType();
+	}
 /**
  *
 

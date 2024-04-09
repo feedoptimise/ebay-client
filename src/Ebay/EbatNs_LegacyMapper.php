@@ -1,4 +1,5 @@
-<?php 
+<?php
+namespace Feedoptimise\Ebay;
 // $Id: EbatNs_LegacyMapper.php,v 1.1 2007/05/31 11:38:00 michael Exp $
 /* $Log: EbatNs_LegacyMapper.php,v $
 /* Revision 1.1  2007/05/31 11:38:00  michael

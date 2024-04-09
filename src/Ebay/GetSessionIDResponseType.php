@@ -32,6 +32,11 @@ class GetSessionIDResponseType extends AbstractResponseType
 	{
 		$this->SessionID = $value;
 	}
+
+	public function __construct()
+	{
+		$this->GetSessionIDResponseType();
+	}
 /**
  *
 

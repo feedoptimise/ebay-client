@@ -11,6 +11,8 @@
  * 
  * 1     30.01.06 12:11 Charnisch
  */
+
+
 class EbatNs_SimpleType
 { 
 	// type-name
@@ -105,7 +107,7 @@ class EbatNs_SimpleType
 		{
 			return '';
 		} 
-	} 
-} 
+	}
+}
 
 ?>
